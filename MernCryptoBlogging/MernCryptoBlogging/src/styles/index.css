@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-brown-600 hover:bg-brown-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent;
+  }
+  
+  .text-primary {
+    @apply text-green-600;
+  }
+  
+  .text-secondary {
+    @apply text-brown-600;
+  }
+  
+  /* Admin Layout Styles */
+  .admin-sidebar {
+    @apply bg-brown-900 text-white flex flex-col;
+  }
+  
+  .admin-main-content {
+    @apply flex-1 flex flex-col overflow-hidden;
+  }
+  
+  .admin-content-scrollable {
+    @apply flex-1 overflow-y-auto p-6;
+  }
+  
+  .admin-top-bar {
+    @apply sticky top-0 z-10 bg-white shadow-sm border-b border-gray-200;
+  }
+}
